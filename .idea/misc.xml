@@ -18,9 +18,18 @@
         <entry key="..\:/codeWorkSpace/githubSource/2022/NestedScrollingDemo/app/src/main/res/layout/fragment_tab.xml" value="0.18385416666666668" />
         <entry key="..\:/codeWorkSpace/githubSource/2022/NestedScrollingDemo/app/src/main/res/layout/item_single_text.xml" value="0.18385416666666668" />
         <entry key="..\:/codeWorkSpace/githubSource/2022/NestedScrollingDemo/app/src/main/res/layout/layout_common_toolbar.xml" value="0.18385416666666668" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2395" />
+        <entry key="app/src/main/res/layout/activity_cdl_demo1.xml" value="0.29393115942028986" />
+        <entry key="app/src/main/res/layout/activity_cdl_demo2.xml" value="0.348731884057971" />
+        <entry key="app/src/main/res/layout/activity_cdl_demo3.xml" value="0.348731884057971" />
+        <entry key="app/src/main/res/layout/activity_cdl_demo4.xml" value="0.348731884057971" />
+        <entry key="app/src/main/res/layout/activity_cdl_with_appbar.xml" value="0.29393115942028986" />
+        <entry key="app/src/main/res/layout/activity_coord_main.xml" value="0.29393115942028986" />
+        <entry key="app/src/main/res/layout/activity_nested_scrolling2_demo.xml" value="0.29393115942028986" />
       </map>
     </option>
   </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="NullableNotNullManager">
     <option name="myDefaultNullable" value="android.support.annotation.Nullable" />
     <option name="myDefaultNotNull" value="android.support.annotation.NonNull" />

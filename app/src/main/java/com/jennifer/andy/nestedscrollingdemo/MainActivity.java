@@ -12,7 +12,8 @@ import com.jennifer.andy.nestedscrollingdemo.ui.nested.NestedScrolling2DemoActiv
 import com.jennifer.andy.nestedscrollingdemo.ui.nested.NestedScrollingParent2Activity;
 import com.jennifer.andy.nestedscrollingdemo.ui.nested.NestedScrollingParentActivity;
 import com.jennifer.andy.nestedscrollingdemo.ui.nested.NestedTraditionActivity;
-
+//.idea/libraries
+//可以设置源码路径
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
 
