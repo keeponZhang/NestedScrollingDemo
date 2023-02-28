@@ -61,12 +61,12 @@ public class NestedHeaderBehavior extends CoordinatorLayout.Behavior<View> {
                 consumed[1] = dy;
                 mOffset = -dy;
                 ViewCompat.offsetTopAndBottom(child, -dy);
-                coordinatorLayout.dispatchDependentViewsChanged(child);
+                //coordinatorLayout.dispatchDependentViewsChanged(child);
             } else { //当超过后，单独处理
                 consumed[1] = child.getHeight() + currentTop;
                 mOffset = -consumed[1];
                 ViewCompat.offsetTopAndBottom(child, -consumed[1]);
-                coordinatorLayout.dispatchDependentViewsChanged(child);
+                //coordinatorLayout.dispatchDependentViewsChanged(child);
             }
         }
         if (dy < 0) {//向下滑动
@@ -75,7 +75,7 @@ public class NestedHeaderBehavior extends CoordinatorLayout.Behavior<View> {
                 consumed[1] = dy;
                 mOffset = -dy;
                 ViewCompat.offsetTopAndBottom(child, -dy);
-                coordinatorLayout.dispatchDependentViewsChanged(child);
+                //coordinatorLayout.dispatchDependentViewsChanged(child);
             }
         }
 

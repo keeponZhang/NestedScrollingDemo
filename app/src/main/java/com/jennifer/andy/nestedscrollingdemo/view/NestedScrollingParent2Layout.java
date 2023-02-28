@@ -9,6 +9,7 @@ import androidx.core.view.ViewCompat;
 import androidx.viewpager.widget.ViewPager;
 
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
@@ -22,7 +23,7 @@ import com.jennifer.andy.nestedscrollingdemo.R;
  */
 
 public class NestedScrollingParent2Layout extends LinearLayout implements NestedScrollingParent2 {
-
+    private static final String TAG = "NestedScrollingParent2L";
     private View mTopView;
     private View mNavView;
     private View mViewPager;
@@ -69,9 +70,13 @@ public class NestedScrollingParent2Layout extends LinearLayout implements Nested
     @Override
     public void onNestedPreScroll(@NonNull View target, int dx, int dy, @NonNull int[] consumed, int type) {
         //这里不管手势滚动还是fling都处理
+        Log.i(TAG, "onNestedPreScroll dy: "+dy);
+
         boolean hideTop = dy > 0 && getScrollY() < mTopViewHeight;
         boolean showTop = dy < 0 && getScrollY() >= 0 && !target.canScrollVertically(-1);
         if (hideTop || showTop) {
+            //scrollBy是VieGroup调用的
+            //这里为什么不用取反，因为系统的dy=原始的-后来的，跟群英传是相反的
             scrollBy(0, dy);
             consumed[1] = dy;
         }
@@ -81,6 +86,7 @@ public class NestedScrollingParent2Layout extends LinearLayout implements Nested
     @Override
     public void onNestedScroll(@NonNull View target, int dxConsumed, int dyConsumed, int dxUnconsumed, int dyUnconsumed, int type) {
         //当子控件处理完后，交给父控件进行处理。
+        Log.d(TAG, "onNestedScroll dyUnconsumed: "+dyUnconsumed+" dyConsumed="+dyConsumed);
         if (dyUnconsumed < 0) {//表示已经向下滑动到头
             scrollBy(0, dyUnconsumed);
         }

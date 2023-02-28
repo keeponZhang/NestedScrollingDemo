@@ -46,11 +46,13 @@ public class DependedView extends View {
             case MotionEvent.ACTION_MOVE:
                 int dx = (int) (event.getX() - mLastX);
                 int dy = (int) (event.getY() - mLastY);
-                if (Math.abs(dx) > mDragSlop || Math.abs(dy) > mDragSlop) {
-                    System.out.println("dx--->" + dx + "dy--->" + dy + "--->" + mDragSlop);
-                    ViewCompat.offsetTopAndBottom(this, dy);
-                    ViewCompat.offsetLeftAndRight(this, dx);
-                }
+                //if (Math.abs(dx) > mDragSlop || Math.abs(dy) > mDragSlop) {
+                //    System.out.println("dx--->" + dx + "dy--->" + dy + "--->" + mDragSlop);
+                //    ViewCompat.offsetTopAndBottom(this, dy);
+                //    ViewCompat.offsetLeftAndRight(this, dx);
+                //}
+                ViewCompat.offsetTopAndBottom(this, dy);
+                ViewCompat.offsetLeftAndRight(this, dx);
                 mLastX = event.getX();
                 mLastY = event.getY();
                 break;

@@ -6,6 +6,7 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.view.GravityCompat;
 import androidx.core.view.ViewCompat;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -59,6 +60,7 @@ public class MeasureLayoutBehavior extends CoordinatorLayout.Behavior<View> {
             final List<View> dependencies = parent.getDependencies(child);
 
             final View header = findFirstDependency(dependencies);
+            Log.d(TAG, "onMeasureChild: header "+header+ " tag="+header.getTag());
             if (header != null) {
                 if (ViewCompat.getFitsSystemWindows(header)
                         && !ViewCompat.getFitsSystemWindows(child)) {
@@ -79,8 +81,13 @@ public class MeasureLayoutBehavior extends CoordinatorLayout.Behavior<View> {
                     // If the measure spec doesn't specify a size, use the current height
                     availableHeight = parent.getHeight();
                 }
+                int scrollRange = getScrollRange(header);
+                int headerMeasuredHeight =  header.getMeasuredHeight();
+                Log.d(TAG, "onMeasureChild: scrollRange="+scrollRange+" headerMeasuredHeight="+headerMeasuredHeight+" availableHeight="+availableHeight);
+
                 //计算当前滚动控件的高度。
                 final int height = availableHeight - header.getMeasuredHeight() + getScrollRange(header);
+                //final int height = availableHeight - header.getMeasuredHeight() ;
                 final int heightMeasureSpec = View.MeasureSpec.makeMeasureSpec(height,
                         childLpHeight == ViewGroup.LayoutParams.MATCH_PARENT
                                 ? View.MeasureSpec.EXACTLY
@@ -89,7 +96,8 @@ public class MeasureLayoutBehavior extends CoordinatorLayout.Behavior<View> {
                 //测量当前滚动的View的正确高度
                 parent.onMeasureChild(child, parentWidthMeasureSpec,
                         widthUsed, heightMeasureSpec, heightUsed);
-
+                int childMeasuredHeight = child.getMeasuredHeight();
+                Log.d(TAG, "onMeasureChild: childMeasuredHeight="+childMeasuredHeight);
                 return true;
             }
         }

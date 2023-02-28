@@ -5,14 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="150dp"-->
+<!--        android:layout_gravity="bottom"-->
+<!--        android:background="@color/colorPrimaryDark"-->
+<!--        android:gravity="center"-->
+<!--        android:text="自定义Behavior测量与布局2"-->
+<!--        android:tag="tv2"-->
+<!--        android:textColor="#fff"/>-->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:background="@color/colorPrimaryDark"
         android:gravity="center"
+        android:tag="tv1"
         android:text="自定义Behavior测量与布局"
         android:textColor="#fff"/>
+
 
 
     <androidx.recyclerview.widget.RecyclerView

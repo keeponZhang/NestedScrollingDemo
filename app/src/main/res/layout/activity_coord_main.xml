@@ -14,35 +14,40 @@
 
         <Button
             android:id="@+id/btn_demo1"
+            android:textAllCaps="false"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="多个view的协同交互效果"/>
+            android:text="多个view的协同交互效果\nCoordinatorLayoutDemo1Activity"/>
 
         <Button
             android:id="@+id/btn_demo2"
             android:layout_width="match_parent"
+            android:textAllCaps="false"
             android:layout_height="wrap_content"
-            android:text="多个view的协同交互效果（xml中使用layout_anchor)"/>
+            android:text="多个view的协同交互效果（xml中使用layout_anchor)\nCoordinatorLayoutDemo2Activity"/>
 
 
         <Button
             android:id="@+id/btn_demo3"
+            android:textAllCaps="false"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="自定义Behavior测量与布局"/>
+            android:text="自定义Behavior测量与布局\nCoordinatorLayoutDemo3Activity"/>
 
         <Button
+            android:textAllCaps="false"
             android:id="@+id/btn_demo4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Behavior的嵌套滑动交互效果"/>
+            android:text="Behavior的嵌套滑动交互效果\nCoordinatorLayoutDemo4Activity"/>
 
 
         <Button
+            android:textAllCaps="false"
             android:id="@+id/btn_demo5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="自定义Behavior事件拦截与处理"/>
+            android:text="自定义Behavior事件拦截与处理\nCoordinatorLayoutDemo2Activity"/>
 
     </LinearLayout>
 
